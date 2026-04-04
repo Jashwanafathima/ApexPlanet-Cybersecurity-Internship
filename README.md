@@ -18,4 +18,4 @@ This task focuses on setting up a cybersecurity lab and understanding basic tool
 * Nmap
 * Wireshark
 
-**Status:** Completed (Day 1 Work)
+
