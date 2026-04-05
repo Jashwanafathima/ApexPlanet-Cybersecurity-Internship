@@ -220,11 +220,10 @@ cat decrypted.txt
 
 ---
 
-##  Generate Hash
+##  Output:
 
-```bash
-openssl dgst -sha256 message.txt
-```
+<img width="1360" height="654" alt="image" src="https://github.com/user-attachments/assets/9d150a5d-25ff-48a4-9ac4-a3e576522d5d" />
+
 
 ---
 
