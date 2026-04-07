@@ -1,17 +1,10 @@
-
-
-# ============================================
 # PASSIVE RECONNAISSANCE 
-# ============================================
 
-# --------------------------------------------
 # 🧩 1. WHOIS
-# --------------------------------------------
 
 # WHAT IS WHOIS?
  WHOIS is used to get domain registration details
 # مثل: owner, registrar, expiry date
-
 # HOW IT WORKS?
  Query → WHOIS Server → Returns domain info
 
@@ -28,7 +21,6 @@
  - Hide sensitive info
 
 # COMMANDS:
-
 whois example.com
 whois vulnweb.com
 
@@ -36,11 +28,7 @@ whois vulnweb.com
 whois example.com | grep "Registrar"
 whois example.com | grep "Expiry"
 
-
-# --------------------------------------------
-# 🧩 2. NSLOOKUP
-# --------------------------------------------
-
+# 2. NSLOOKUP
 # WHAT IS NSLOOKUP?
  Used to query DNS and get IP + DNS records
 
@@ -62,7 +50,6 @@ whois example.com | grep "Expiry"
  - Restrict DNS info
 
 # COMMANDS:
-
 # Basic lookup (Domain → IP)
 nslookup example.com
 nslookup testphp.vulnweb.com
@@ -79,10 +66,7 @@ nslookup 8.8.8.8
 # Use specific DNS server
 nslookup google.com 8.8.8.8
 
-
-# --------------------------------------------
 # 3. GOOGLE DORKING
-# --------------------------------------------
 
 # NOTE:
 # These are NOT bash commands
@@ -103,11 +87,7 @@ nslookup google.com 8.8.8.8
 # FIND PARAMETERS (IMPORTANT)
  site:example.com inurl:php?id=
 
-
-# --------------------------------------------
 #  COMBINED WORKFLOW
-# --------------------------------------------
-
 # STEP 1: WHOIS
 whois example.com
 
@@ -122,20 +102,13 @@ nslookup -type=ns example.com
  site:example.com filetype:pdf
 
 
-# --------------------------------------------
 #  KEY LEARNINGS
-# --------------------------------------------
-
 # - Passive recon = no direct interaction
 # - WHOIS → domain info
 # - NSLOOKUP → DNS + IP
 # - Google Dorks → public sensitive data
 
-
-# --------------------------------------------
 #  SECURITY INSIGHTS
-# --------------------------------------------
-
 # - Public info can be exploited
 # - Misconfigured DNS = risk
 # - Exposure increases attack surface
