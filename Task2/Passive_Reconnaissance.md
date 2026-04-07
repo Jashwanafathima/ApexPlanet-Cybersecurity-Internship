@@ -103,9 +103,9 @@ nslookup -type=ns example.com
 
 
 #  KEY LEARNINGS
-# - Passive recon = no direct interaction
-# - WHOIS → domain info
-# - NSLOOKUP → DNS + IP
+ - Passive recon = no direct interaction
+ - WHOIS → domain info
+ - NSLOOKUP → DNS + IP
 # - Google Dorks → public sensitive data
 
 #  SECURITY INSIGHTS
