@@ -4,7 +4,7 @@
 
 # WHAT IS WHOIS?
  WHOIS is used to get domain registration details
-# مثل: owner, registrar, expiry date
+
 # HOW IT WORKS?
  Query → WHOIS Server → Returns domain info
 
@@ -106,9 +106,4 @@ nslookup -type=ns example.com
  - Passive recon = no direct interaction
  - WHOIS → domain info
  - NSLOOKUP → DNS + IP
-# - Google Dorks → public sensitive data
-
-#  SECURITY INSIGHTS
-# - Public info can be exploited
-# - Misconfigured DNS = risk
-# - Exposure increases attack surface
+ - Google Dorks → public sensitive data
