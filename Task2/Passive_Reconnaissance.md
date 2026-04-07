@@ -1,108 +1,108 @@
 # PASSIVE RECONNAISSANCE 
 
-# 🧩 1. WHOIS
+# 1. WHOIS
 
-# WHAT IS WHOIS?
+## WHAT IS WHOIS?
  WHOIS is used to get domain registration details
 
-# HOW IT WORKS?
+## HOW IT WORKS?
  Query → WHOIS Server → Returns domain info
 
-# USAGE:
+## USAGE:
 - Passive recon
 - Domain investigation
 
-# ATTACKER USE:
+## ATTACKER USE:
  - Collect emails → phishing
  - Find expiry → domain takeover
 
-# PREVENTION:
+## PREVENTION:
  - Enable WHOIS privacy
  - Hide sensitive info
 
-# COMMANDS:
+## COMMANDS:
 whois example.com
 whois vulnweb.com
 
-# Extract specific info
+## Extract specific info
 whois example.com | grep "Registrar"
 whois example.com | grep "Expiry"
 
 # 2. NSLOOKUP
-# WHAT IS NSLOOKUP?
+## WHAT IS NSLOOKUP?
  Used to query DNS and get IP + DNS records
 
-# HOW IT WORKS?
+## HOW IT WORKS?
  Query → DNS Resolver → DNS Server → Response
 
-# USAGE:
+## USAGE:
  - Find IP address
  - Find mail servers
  - DNS troubleshooting
 
-# ATTACKER USE:
+## ATTACKER USE:
  - Identify target IP
  - Find mail servers for phishing
  - Map DNS infra
 
-# PREVENTION:
+## PREVENTION:
  - Use DNSSEC
  - Restrict DNS info
 
-# COMMANDS:
-# Basic lookup (Domain → IP)
+## COMMANDS:
+## Basic lookup (Domain → IP)
 nslookup example.com
 nslookup testphp.vulnweb.com
 
-# MX Records (Mail Servers)
+## MX Records (Mail Servers)
 nslookup -type=mx example.com
 
-# Name Servers
+## Name Servers
 nslookup -type=ns example.com
 
-# Reverse Lookup (IP → Domain)
+## Reverse Lookup (IP → Domain)
 nslookup 8.8.8.8
 
-# Use specific DNS server
+## Use specific DNS server
 nslookup google.com 8.8.8.8
 
 # 3. GOOGLE DORKING
 
-# NOTE:
-# These are NOT bash commands
-# Run them in Google search
+## NOTE:
+ These are NOT bash commands
+ Run them in Google search
 
-# SEARCH WITHIN SITE
+## SEARCH WITHIN SITE
  site:example.com
 
-# FIND LOGIN PAGES
+## FIND LOGIN PAGES
  site:example.com inurl:login
 
-# FIND ADMIN PANELS
+## FIND ADMIN PANELS
  site:example.com inurl:admin
 
-# FIND FILES
+## FIND FILES
  site:example.com filetype:pdf
 
-# FIND PARAMETERS (IMPORTANT)
+## FIND PARAMETERS (IMPORTANT)
  site:example.com inurl:php?id=
 
 #  COMBINED WORKFLOW
-# STEP 1: WHOIS
+## STEP 1: WHOIS
 whois example.com
 
-# STEP 2: NSLOOKUP
+## STEP 2: NSLOOKUP
 nslookup example.com
 nslookup -type=mx example.com
 nslookup -type=ns example.com
 
-# STEP 3: GOOGLE DORKING (run in browser)
+## STEP 3: GOOGLE DORKING (run in browser)
  site:example.com
  site:example.com inurl:login
  site:example.com filetype:pdf
 
 
-#  KEY LEARNINGS
+##  KEY LEARNINGS
  - Passive recon = no direct interaction
  - WHOIS → domain info
  - NSLOOKUP → DNS + IP
