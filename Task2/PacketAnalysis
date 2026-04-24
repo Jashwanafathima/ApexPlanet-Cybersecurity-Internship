@@ -1,1 +1,11 @@
 
+📡 Packet Analysis with Wireshark
+📌 Objective
+
+To capture and analyze network traffic using Wireshark, identify protocols like HTTP, FTP, DNS, extract sensitive data from unencrypted traffic, and simulate a SYN flood attack for analysis.
+
+🛠️ Tools Used
+Wireshark
+Kali Linux
+hping3
+Metasploitable2 (for FTP testing)
