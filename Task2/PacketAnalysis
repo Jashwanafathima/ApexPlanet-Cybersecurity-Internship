@@ -1,7 +1,6 @@
-📡 Packet Analysis with Wireshark
+## Packet Analysis with Wireshark
 📌 Objective
-
-To capture and analyze network traffic using Wireshark, identify protocols like HTTP, FTP, DNS, extract sensitive data from unencrypted traffic, and simulate a SYN flood attack for analysis.
+          To capture and analyze network traffic using Wireshark, identify protocols like HTTP, FTP, DNS, extract sensitive data from unencrypted traffic, and simulate a SYN flood attack for analysis.
 
 🛠️ Tools Used
 Wireshark
@@ -13,11 +12,10 @@ Metasploitable2 (for FTP testing)
 wireshark
 Select network interface (eth0 / wlan0)
 Click Start Capture
+
 🔍 2. Analyzing Protocols
 📌 HTTP Traffic
-
 Filter:
-
 http
 Used for web browsing
 Data is unencrypted
@@ -25,22 +23,21 @@ Can view:
 URLs
 Form data
 Headers
+
 📌 DNS Traffic
-
 Filter:
-
 dns
 Resolves domain → IP
 Useful to track:
 Visited domains
 Suspicious requests
+
 📌 FTP Traffic
-
 Filter:
-
 ftp
 Used for file transfer
 Insecure protocol (plaintext credentials)
+
 🔐 3. Extracting Credentials from FTP
 📌 Filter FTP Login Packets
 ftp.request.command == "USER" || ftp.request.command == "PASS"
@@ -55,8 +52,8 @@ PASS 123456
 FTP transmits credentials in plaintext, making it vulnerable to packet sniffing.
 
 🚨 4. SYN Flood Attack Analysis
-📌 What is SYN Flood?
 
+📌 What is SYN Flood?
 A Denial of Service (DoS) attack where attacker sends multiple SYN requests but never completes handshake.
 
 ⚙️ Simulate Attack (Kali Linux)
@@ -69,7 +66,6 @@ No ACK response
 Half-open connections
 
 👉 Indicates:
-
 Server resources are getting exhausted → DoS condition
 
 📈 5. Key Findings
@@ -77,16 +73,13 @@ HTTP and FTP traffic can expose sensitive data if not encrypted
 DNS queries reveal browsing activity
 FTP credentials can be easily captured
 SYN flood attack causes service disruption
+
 🛡️ 6. Mitigation Techniques
 Use HTTPS instead of HTTP
 Replace FTP with SFTP/FTPS
 Enable firewall rules & IDS/IPS
 Configure SYN cookies to prevent SYN flood
 Monitor traffic using SIEM tools
-📷 7. Screenshots to Include
-Wireshark capture (HTTP, DNS, FTP)
-FTP credentials extraction
-SYN flood packet capture
-🎯 Conclusion
 
+🎯 Conclusion
 This task demonstrates how attackers can exploit unencrypted protocols and how network traffic analysis helps in detecting cyber threats and attacks.
